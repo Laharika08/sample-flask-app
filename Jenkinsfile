@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/YOUR_USERNAME/sample-flask-app.git'
+                git url: 'https://github.com/Laharika08/sample-flask-app.git', credentialsId: 'github-pat', branch: 'main'
             }
         }
         stage('Install Dependencies') {
